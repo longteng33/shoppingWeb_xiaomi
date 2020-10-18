@@ -1,0 +1,146 @@
+.site-footer .footer-service {
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .site-footer .footer-service .service-list li {
+    float: left;
+    width: calc(20% - 1px);
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .site-footer .footer-service .service-list li + li {
+    border-left: 1px solid #e0e0e0;
+  }
+  .site-footer .footer-service a {
+    color: #616161;
+  }
+  .site-footer .footer-service a:hover {
+    color: #ff6700;
+  }
+  .site-footer .footer-service a i {
+    margin-right: 6px;
+    font-size: 24px;
+    vertical-align: -3px;
+  }
+  .site-footer .footer-links {
+    padding: 40px 0;
+  }
+  .site-footer .footer-links .col-links {
+    float: left;
+    width: 160px;
+    height: 112px;
+  }
+  .site-footer .footer-links dt {
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+    margin: 0 0 26px;
+  }
+  .site-footer .footer-links dd {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 12px;
+  }
+  .site-footer .footer-links dd a {
+    color: #757575;
+  }
+  .site-footer .footer-links dd a:hover {
+    color: #ff6700;
+  }
+  .site-footer .footer-links .col-contact {
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    color: #616161;
+    text-align: center;
+  }
+  .site-footer .footer-links .col-contact .phone {
+    font-size: 22px;
+    color: #ff6700;
+    margin: 0 0 5px;
+    line-height: 1;
+  }
+  .site-footer .footer-links .col-contact p {
+    font-size: 12px;
+    margin: 0 0 16px;
+  }
+  
+  .site-footer .footer-links .col-contact a {
+    background: #fff;
+    border-color: #ff6700;
+    color: #ff6700;
+  }
+  .site-footer .footer-links .col-contact a i {
+    vertical-align: -2px;
+  }
+  .site-footer .footer-links .col-contact a:hover {
+    background: #ff6700;
+    color: #fff;
+  }
+  
+  .site-info {
+    background: #fafafa;
+    padding: 30px 0;
+    font-size: 12px;
+  }
+  .site-info .logo {
+    float: left;
+    position: relative;
+    width: 57px;
+    height: 57px;
+    line-height: 57px;
+    margin-right: 10px;
+    font-size: 24px;
+    text-align: center;
+    background: #ff6700;
+  }
+  .site-info .logo::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 57px;
+    height: 57px;
+    background-image: url(../../public/mi-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .site-info .info-text {
+    margin-left: 67px;
+    color: #b0b0b0;
+  }
+  .site-info .info-text .sites {
+    margin: 0;
+  }
+  .site-info .info-text .sites a {
+    color: #757575;
+  }
+  .site-info .info-text .sites a:hover {
+    color: #ff6700;
+  }
+  .site-info .info-links {
+    margin-left: 67px;
+    padding-top: 4px;
+  }
+  .site-info .info-links a {
+    display: inline-block;
+  }
+  .site-info .info-links img {
+    height: 28px;
+    margin-bottom: 15px;
+  }
+  .site-info .slogan {
+    background-image: url(../../public/slogan2016.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .ir{
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -9999px;
+  }
