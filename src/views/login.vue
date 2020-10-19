@@ -73,7 +73,7 @@
               <div class="errors" v-if="errors.has('password2')">请输入相同的密码</div>
               <button class="btn"  @click="submit" >{{isLogin?'登录':'注册'}}</button>
             </div>
-            <p>接口地址服务器失效，假登录，使用本地存储</p>
+            <p>接口地址服务器失效，假登录</p>
             <p>用户名long，密码1</p>
           </div>
         </div>

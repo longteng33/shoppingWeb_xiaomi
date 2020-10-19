@@ -10,7 +10,6 @@
           <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
         </div>
         <div class="miniheader-info">
-          <i class="iconfont">&#x221a;</i>
           <a href="#" class="user-name">
             <span></span>
           </a>
@@ -49,7 +48,7 @@
               </div>
 
               <div class="address-item address-new" @click="add_Address">
-                <i class="iconfont">&#xe609;</i>
+                <i class="iconfont icon-jiahao"></i>
                 添加新地址
               </div>
             </div>
@@ -151,7 +150,7 @@
           class="close"
           @click="cancelDia"
         >
-          <i class="iconfont">&#xe602;</i>
+          <i class="iconfont icon-chahao"></i>
         </a>
       </div>
       <div class="edit-body">
@@ -525,7 +524,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url(../css/iconfont.css);
+@import url(../css/iconfont/iconfont.css);
 @import url(../css/style.css);
 @import url(../css/checkout.css);
 </style>

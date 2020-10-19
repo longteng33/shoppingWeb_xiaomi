@@ -23,14 +23,13 @@ Vue.component("app-footer", footer);
 // 引入表单验证插件 vee-validate
 // vee-validate插件3版本引入后有问题(坑)，请下载如下版本
 // npm i vee-validate@2.2.15 --save
-
 //引入验证表单的第三方库
-import VeeValidate, { Validator } from 'vee-validate';
+import VeeValidate from 'vee-validate';
 //引入中文语言包
 import zh_CN from 'vee-validate/dist/locale/zh_CN';
 Vue.use(VeeValidate);
 // 执行Vue.use(VeeValidate)，Vue的原型中将会有$validator变量
-Validator.localize('zhzh_CN', zh_CN);
+VeeValidate.Validator.localize('zhzh_CN', zh_CN);
 
 
 

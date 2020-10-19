@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6472703",
+      "name": "复选框",
+      "font_class": "fuxuankuang",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "6536707",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "967641",
+      "name": "成功 - 不带圈",
+      "font_class": "success_no_circle",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "9512564",
+      "name": "空",
+      "font_class": "empty",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
       "icon_id": "6536737",
       "name": "叉号",
       "font_class": "chahao",

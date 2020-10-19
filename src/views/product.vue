@@ -182,7 +182,7 @@ export default {
     ...mapMutations("user", ["changeTotalCartGoods"]),
     getUserInfo() {
       var userInfo = setStorage("get", "userInfo");
-      if (userInfo.isLoggedIn) {
+      if (userInfo) {
         this.userInfo = userInfo;
       }
     },

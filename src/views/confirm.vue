@@ -25,7 +25,7 @@
       <div class="container">
        
           <div class="confirm-order confirm-section clearfix" v-if="confirmOrder.length!=0">
-            <i class="iconfont">&#x221a;</i>
+            <i class="iconfont icon-success_no_circle"></i>
             <div class="box-order ">
               <div class="order-info">
                 <h2 class="info-title">订单提交成功！去付款咯～</h2>
@@ -40,7 +40,7 @@
               >
                 <div class="info-time">
                   <p v-if="item.timeLeft != -1">
-                    请在<span>{{ item.timeLeft }}</span
+                    请在<span>{{ item.timeLeft|timeFormat }}</span
                     >内完成支付, 超时后将取消订单！
                   </p>
                   <p v-else class="warning">支付超时，已取消订单</p>
@@ -108,7 +108,7 @@
             </div>
           </div>
           <div v-else class="confirm-order confirm-section clearfix">
-             <i class="iconfont icon-icon22fuzhi"></i>
+             <i class="iconfont icon-empty"></i>
             <div class="box-order ">
               <div class="order-info">
                 <h2 class="info-title">暂无订单～</h2>
@@ -205,7 +205,7 @@ export default {
       this.confirmOrder = confirmOrder;
       let now = new Date();
       let timeLeft = item.endTime - now.getTime();//实时剩余时间数
-      item.timeLeft = this.timeTransform(timeLeft);
+      item.timeLeft=timeLeft;
 
       if (timeLeft <= 0) {
         clearInterval(item.timer);
@@ -215,26 +215,7 @@ export default {
       }
       
     },
-    timeTransform(time) {
-      let d = 1000 * 60 * 60 * 24;
-      let h = 1000 * 60 * 60;
-      let m = 1000 * 60;
-      let s = 1000;
-
-      let day = Math.floor(time / d);
-      time = time % d;
-      let hour = Math.floor(time / h);
-      time = time % h;
-      let min = Math.floor(time / m);
-      time = time % m;
-      let sec = Math.floor(time / s);
-      time = time % s;
-      if (day == 0) {
-        return hour + "时" + min + "分" + sec + "秒";
-      } else {
-        return day + "天" + hour + "时" + min + "分" + sec + "秒";
-      }
-    },
+  
     pay(orderItem, index) {
       // api.post("/user/pay", { order_no: this.order_no }).then((data) => {
       //   this.payURL = data;
@@ -277,13 +258,13 @@ export default {
        this.userInfo.confirmOrder=this.confirmOrder;//confirmOrder等于了新的confirmOrder，所以需重新赋值
       setStorage("set", "userInfo", this.userInfo);
       
-      this.isShow_pay = false;
+      
       this.$message({
           message: '支付成功',
           type: 'success'
         });
       this.currentPayIndex=null
-     
+     this.isShow_pay = false;
     },
 
     closePay() {

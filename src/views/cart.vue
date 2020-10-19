@@ -11,7 +11,6 @@
           <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
         </div>
         <div class="miniheader-info">
-          <i class="iconfont">&#x221a;</i>
           <a href="#" class="user-name">
             <span></span>
           </a>
@@ -52,7 +51,7 @@
             >
               <div class="col col-check">
                 <i
-                  class="iconfont icon-checkbox"
+                  class="iconfont icon-checkbox "
                   :class="{ select: good.checked }"
                   @click="selectedOne($event, good, index)"
                   :data-id="good.goods_id"
@@ -290,14 +289,6 @@ export default {
           good.num = setStorage("get", "userInfo").cartOrder[index].num;
         });
 
-      // if (confirm("是否删除")) {
-      //   this.cartOrder.splice(index, 1);
-      //   this.setCart(this.cartOrder);
-      //   setStorage('set','userInfo',this.userInfo);
-      // }else{
-      //   // 如果不确定删除
-      //   good.num=setStorage('get','userInfo').cartOrder[index].num;
-      // }
     },
     // 点击结算
     handlePay() {
@@ -312,6 +303,7 @@ export default {
       }
       let checkOrder = [];
 
+    // 先将cartOrder中所有属性为checked的挑出来
       for (var i = 0; i < this.cartOrder.length; ) {
         if (this.cartOrder[i].checked) {
           this.cartOrder[i].checked = false;
@@ -322,6 +314,7 @@ export default {
         }
       }
 
+// 再看this.userInfo.checkOrder中有没有已经有的
       if (this.userInfo.checkOrder.length !== 0) {
         for (let i = 0; i < checkOrder.length; ) {
           let id = checkOrder[i].goods_id;

@@ -159,7 +159,6 @@
 
 <script>
 import api from "../utils/api";
-import { request } from "../utils/request";
 
 export default {
   name: "Home",
@@ -172,6 +171,7 @@ export default {
       (data) => {
         if (data.meta.status == 200) {
           this.menuCarousel = data.message;
+          console.log(data)
         }
       },
       (err) => {}
@@ -190,7 +190,7 @@ export default {
     //   })
     // })
 
-    document.title = "小米商城";
+    // document.title = "小米商城";
     // 自动轮播
     // setInterval(this.carousel, 3000);
   },
@@ -202,7 +202,7 @@ export default {
         { cid: 12, name: "小米电视" },
         // { cid: 5, name: "曲面电视" },
         { cid: 187, name: "荣耀手机" },
-        { cid: 1355, name: "智能手环" },
+        // { cid: 1355, name: "智能手环" },
         // { cid: 486, name: "豆浆机" },
         { cid: 862, name: "衬衫" },
       ],
