@@ -171,7 +171,7 @@ export default {
       (data) => {
         if (data.meta.status == 200) {
           this.menuCarousel = data.message;
-          console.log(data)
+          // console.log(data)
         }
       },
       (err) => {}
